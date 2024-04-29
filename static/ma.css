@@ -1,0 +1,36 @@
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(125deg, #F44336, #E91E63, #9C27B0, #3F51B5, #2196F3);
+    background-size: 400%;
+    font-family: "montserrat";
+    animation: bganimation 15s infinite;
+}
+@keyframes bganimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+form {
+    text-align: center;
+}
+
+/* 如果需要对上传按钮进行样式调整，可以添加以下样式 */
+input[type="submit"] {
+    /* 添加你需要的样式 */
+}
+
+/* 如果需要对图片进行样式调整，可以添加以下样式 */
+img {
+    /* 添加你需要的样式 */
+}
