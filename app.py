@@ -20,25 +20,36 @@ def bef():
     setattr(g, "isShow", False)
     setattr(g, "isRetrainSucc", False)
 
+# 登录
 @app.route("/")
 def aa1():
     return render_template('index2.html')
 
+# 主页界面
 @app.route("/test")
 def aa0():
     return render_template('test.html')
 
+# 注册
 @app.route("/register")
 def aa2():
     return render_template('register.html')
+
 
 @app.route("/q")
 def aa():
     return render_template('index.html',isShow = g.isShow,isRetrainSucc=g.isRetrainSucc )
 
+# 自定义
 @app.route('/diy')
 def diy():
     return render_template('dd.html')
+
+# 风格1
+@app.route('/style1')
+def style1():
+    return render_template('style1.html')
+
 
 @app.route('/trans', methods=['get','POST'])
 def process_image():
