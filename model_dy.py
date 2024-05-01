@@ -21,9 +21,10 @@ from models import *
 # % config
 # InlineBackend.figure_format = 'retina'
 
-def make_image():
+def make_image(style_image1):
+    sty_img=style_image1
     device = ("cuda" if torch.cuda.is_available() else "cpu")
-
+    print(sty_img)
     def rmrf(path):
         try:
             shutil.rmtree(path)
@@ -80,8 +81,10 @@ def make_image():
         tensor_normalizer
     ])
 
-    content_dataset = torchvision.datasets.ImageFolder(r'static\original\1',
+    content_dataset = torchvision.datasets.ImageFolder(r'flasktest\static\original\1',
                                                        transform=data_transform)
+    
+
 
     style_weight = 50
     content_weight = 1
@@ -98,16 +101,17 @@ def make_image():
 
     optimizer = optim.Adam(trainable_params.values(), 1e-3)
     content_data_loader = torch.utils.data.DataLoader(content_dataset, batch_size=batch_size, shuffle=True)
-
-    style_image = read_image(f'static\\style\\xingkong.jpg',
+    style_image = read_image(sty_img,
                              target_width=256).to(device)
+    # style_image = read_image(f'static\\style\\xingkong.jpg',
+    #                          target_width=256).to(device)
     style_features = vgg16(style_image)
     style_mean_std = mean_std(style_features)
 
     metanet.load_state_dict(
-        torch.load('sourse\\model\\metanet_base16_style50_tv1e-06_tagnohvd_5.pth'))
+        torch.load('flasktest\\sourse\\model\\metanet_base16_style50_tv1e-06_tagnohvd_5.pth'))
     transform_net.load_state_dict(torch.load(
-        'sourse\\model\\metanet_base16_style50_tv1e-06_tagnohvd_transform_net_5.pth'))
+        'flasktest\\sourse\\model\\metanet_base16_style50_tv1e-06_tagnohvd_transform_net_5.pth'))
 
     n_batch = 20
     with tqdm(enumerate(content_data_loader), total=n_batch) as pbar:
@@ -170,11 +174,12 @@ def make_image():
 
         # Count the number of files with image extensions
         image_count = sum(1 for file in files if os.path.splitext(file)[1].lower() in image_extensions)
-
+        for file in files:
+            print(file)
         return image_count
 
     # Specify the directory path
-    directory_path = 'static/original/1/a/'
+    directory_path = 'flasktest/static/original/1/a/'
 
     # Count the number of images in the directory
     num_images = count_images_in_directory(directory_path)
@@ -184,10 +189,11 @@ def make_image():
     import os
     from torchvision.utils import save_image
 
-    output_dir = 'static/inputs/'
+    output_dir = 'flasktest/static/inputs/'
     os.makedirs(output_dir, exist_ok=True)
-
-    content_images = torch.stack([random.choice(content_dataset)[0] for i in range(num_images)]).to(device)
+    
+    content_images = torch.stack([content_dataset[i][0] for i in range(num_images)]).to(device)
+    # content_images = torch.stack([random.choice(content_dataset)[0] for i in range(num_images)]).to(device)
     transformed_images = transform_net(content_images)
 
     # transformed_images_vis = torch.cat([x for x in transformed_images], dim=-1)
@@ -231,5 +237,5 @@ def make_image():
     # plt.clf()
 
 
-
-# make_image()
+# style_image=r'flasktest\static\style\style1\xingkong.jpg'
+# make_image(style_image)
