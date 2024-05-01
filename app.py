@@ -24,6 +24,10 @@ def bef():
 def aa1():
     return render_template('index2.html')
 
+@app.route("/test")
+def aa0():
+    return render_template('test.html')
+
 @app.route("/register")
 def aa2():
     return render_template('register.html')
