@@ -114,7 +114,7 @@ def aa0():
 # 注册页面
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    # create_user_table()
+    # create_user_table() //第一次运行创建用户表
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")

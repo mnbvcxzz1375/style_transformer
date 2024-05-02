@@ -1,5 +1,12 @@
 
 
+.border-box {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto; /* 居中对齐 */
+        }
+
 			.reddot {
 				position: relative;
 				display: inline-block;
@@ -58,6 +65,8 @@
 				flex-wrap: wrap
 			}
 
+
+
 			@media screen and (max-width:767px) {
 				.imgformat .ICbox1 .p1 {
 					width: 100%;
@@ -85,6 +94,8 @@
 					width: 100%;
 					margin: .24rem 0
 				}
+
+
 
 				.imgformat .ICbox2 .topText .p1 {
 					width: 100%;
@@ -19045,7 +19056,7 @@
 
 			.ICbox2 .settingBox .settingButton {
 				width: 214px;
-				height: 60px;
+				height: 10%;
 				background: #2975f9;
 				border-radius: 4px;
 				opacity: 1;

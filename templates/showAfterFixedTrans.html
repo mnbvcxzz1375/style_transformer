@@ -110,24 +110,13 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
-
-    <div style="margin-top: 5%;">
-    </div>
-
-
-		<div class="ICbox2">
-			<div class="topText">
-				<h1 class="p1">图片格式在线转换</h1>
-				<p class="p2">在线图片格式互转功能，可实现对PNG、JPG、BMP等图片格式进行互转处理。</p>
-			</div>
-			<div class="fileList" customclass="loading" element-loading-text="正在载入转换后的图片...">
-				<div class="el-loading-mask" style="display: none;">
-
-				</div>
-
-
-				<div style="width: 75%;margin-left:20%">
-					{% set image_files = 'flasktest/static/original/1/a' | list_files %}
+		<div class="" style="margin-top: 10%;">
+			<div class="" style="text-align: center;font-weight:600;font-size: 30px;">图片格式在线转换</div>
+			<div class="" style="text-align: center;margin-top: 2%;margin-bottom: 2%;font-size: 20px;">在线图片格式互转功能，可实现对PNG、JPG、BMP等图片格式进行互转处理。</div>
+		</div>
+	
+		<div class="" style="width: 80%;margin: 0 auto;">
+			{% set image_files = 'flasktest/static/original/1/a' | list_files %}
 				  {% if image_files %}
 					  <div class="row" style="margin-top: 5%;">
 						  {% for image_file in image_files %}
@@ -152,17 +141,11 @@
 						  {% endfor %}
 					  </div>
 				  {% endif %}
-				  </div>
 
 
-            </div>
-
-
-			
 		</div>
-
-		<div class="container" style="margin-top: 2.5%; " >
-			<div class="row mt-4" style="margin-left: 30%">
+		<div style="margin-top: 2.5%; margin-bottom: 2.5%; width:50%; margin-left: 40%;" >
+			<div class="row mt-4">
 				<div class="col-md-6 offset-md-3" >
 					<form action="/clear" method="GET">
 						<button type="submit" class="btn btn-success btn-block" >Clear Images</button>
@@ -170,7 +153,6 @@
 				</div>
 			</div>
 		</div>
-		
 
 		     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 			 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
