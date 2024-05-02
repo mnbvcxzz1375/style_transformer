@@ -237,5 +237,5 @@ def make_image(style_image1):
     # plt.clf()
 
 
-# style_image=r'flasktest\static\style\style1\xingkong.jpg'
+# style_image=r'flasktest\static\style\style3\style3.jpg'
 # make_image(style_image)

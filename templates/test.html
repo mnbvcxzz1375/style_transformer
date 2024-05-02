@@ -111,7 +111,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -128,33 +128,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
+                    <li class="active"><a href="/test">首页 <span class="sr-only">(current)</span></a></li>
+                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                             aria-expanded="false">个人中心 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/">退出登录</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
+
                         </ul>
                     </li>
                 </ul>
@@ -164,9 +147,9 @@
     <section class="shared_section__3Ujj7 bgWhite">
         <div class="Container_container__3erG2">
             <div class="Hgroup_hgroup__3R5Vk">
-                <h2 class="h2">使用Fotor懒设计照片滤镜，一键美化照片</h2>
+                <h2 class="h2">使用Style transform转换照片风格，一键美化照片</h2>
                 <div class="nested-link Hgroup_hgroup__subheading__3R5Hk">
-                    <p>Fotor懒设计提供专业摄影师调制的上百个照片滤镜，不同风格类型，随心挑选，助你成为滤镜大师！</p>
+                    <p>不同风格类型，随心挑选，助你成为风格大师！快来动手构建你自己的模型吧</p>
                 </div>
             </div><span style="padding-top: 51.724137931034484%;"
                 class="Image_imageWrapper__vikrc InterfaceSection_image__32Q6E">
@@ -183,16 +166,16 @@
     <section class="shared_section__3Ujj7 bgWhite">
         <div class="Container_container__3erG2">
             <div class="Hgroup_hgroup__3R5Vk">
-                <h2 class="h2">使用Fotor懒设计照片滤镜，一键美化照片</h2>
+                <h2 class="h2">使用Style transform转换照片风格，一键美化照片</h2>
                 <div class="nested-link Hgroup_hgroup__subheading__3R5Hk">
-                    <p>Fotor懒设计提供专业摄影师调制的上百个照片滤镜，不同风格类型，随心挑选，助你成为滤镜大师！</p>
+                    <p>来试试梵高大师的《星月夜》吧，星月夜是后印象派画家梵·高的代表作之一。</p>
                 </div>
             </div>
             <span style="padding-top: 51.724137931034484%;"
                 class="Image_imageWrapper__vikrc InterfaceSection_image__32Q6E">
-                <img alt="照片滤镜" src="{{ url_for('static', filename='bg-.jpg') }}" src class="lzy Image_image__MPSDi" />
+                <img alt="照片滤镜" src="{{ url_for('static', filename='xingkong.jpg') }}" src class="lzy Image_image__MPSDi" />
             </span>
-            <a style="width: ;" href="/style1" target="_blank"
+            <a style="width: ;" href="/trans_style1" target="_blank"
                 rel="nofollow" class="PageLink_pageLink__1twZl shared_pageLink__3L8vi PageLink_addLink__h5PN_">
                 <div class="PageLink_linkbox__2Z4AR">
                     <span>马上试试（style1）</span>
@@ -203,16 +186,16 @@
     <section class="shared_section__3Ujj7">
         <div class="Container_container__3erG2 IntroSection_introContainer__24jz4">
             <div class="IntroSection_intro__image__1GF7t"><span style="padding-top: 74.46808510638297%;"
-                    class="Image_imageWrapper__vikrc"><img alt="复古滤镜" src="{{ url_for('static', filename='bg.jpg') }}"
+                    class="Image_imageWrapper__vikrc"><img alt="复古滤镜" src="{{ url_for('static', filename='style2.jpg') }}"
                         src class="lzy Image_image__MPSDi" /></span></div>
             <div class="IntroSection_intro__body___1fjL">
-                <h2 class="h2">复古滤镜</h2>
+                <h2 class="h2">使用Style transform转换照片风格，一键美化照片</h2>
                 <div class="IntroSection_intro__content__-dr-k">
-                    <p>复古潮流强势回归。使用Fotor懒设计复古滤镜，打造时髦怀旧复古风格效果的照片。</p>
-                </div><a style="width: ;" href="https://www.fotor.com.cn/photo-editor-beta/editor/effect"
+                    <p>斑斓潮流强势回归。使用Style transform的彩色风格，打造时髦风格效果的照片。</p>
+                </div><a style="width: ;" href="/trans_style2"
                     target="_blank" rel="nofollow"
                     class="PageLink_pageLink__1twZl IntroSection_intro__pageLink__1exCC PageLink_addLink__h5PN_">
-                    <div class="PageLink_linkbox__2Z4AR"><span>马上试试</span></div>
+                    <div class="PageLink_linkbox__2Z4AR"><span>马上试试(style2)</span></div>
                 </a>
             </div>
         </div>
@@ -220,16 +203,16 @@
     <section class="shared_section__3Ujj7">
         <div class="Container_container__3erG2 IntroSection_introContainer__24jz4 IntroSection_reverse__18UlM">
             <div class="IntroSection_intro__image__1GF7t"><span style="padding-top: 74.46808510638297%;"
-                    class="Image_imageWrapper__vikrc"><img alt="经典滤镜" src="{{ url_for('static', filename='bg.jpg') }}"
+                    class="Image_imageWrapper__vikrc"><img alt="经典滤镜" src="{{ url_for('static', filename='style3.jpg') }}"
                         src class="lzy Image_image__MPSDi" /></span></div>
             <div class="IntroSection_intro__body___1fjL">
-                <h2 class="h2">经典滤镜</h2>
+                <h2 class="h2">使用Style transform转换照片风格，一键美化照片</h2>
                 <div class="IntroSection_intro__content__-dr-k">
-                    <p>最受欢迎的经典滤镜，适合绝大多数风格的照片。随手拍摄的照片，也能一键变大片。</p>
-                </div><a style="width: ;" href="https://www.fotor.com.cn/photo-editor-beta/editor/effect"
+                    <p>经典的中国山水画风格，适合绝大多数风格的照片。随手拍摄的照片，也能一键变大片。</p>
+                </div><a style="width: ;" href="/trans_style3"
                     target="_blank" rel="nofollow"
                     class="PageLink_pageLink__1twZl IntroSection_intro__pageLink__1exCC PageLink_addLink__h5PN_">
-                    <div class="PageLink_linkbox__2Z4AR"><span>马上试试</span></div>
+                    <div class="PageLink_linkbox__2Z4AR"><span>马上试试(style3)</span></div>
                 </a>
             </div>
         </div>
@@ -237,16 +220,16 @@
     <section class="shared_section__3Ujj7">
         <div class="Container_container__3erG2 IntroSection_introContainer__24jz4">
             <div class="IntroSection_intro__image__1GF7t"><span style="padding-top: 74.46808510638297%;"
-                    class="Image_imageWrapper__vikrc"><img alt="lomo滤镜" src="{{ url_for('static', filename='bg.jpg') }}"
+                    class="Image_imageWrapper__vikrc"><img alt="lomo滤镜" src="https://th.bing.com/th/id/OIP.mH9YLFEL5YdVxJM82mjVJQAAAA?rs=1&pid=ImgDetMain"
                         src class="lzy Image_image__MPSDi" /></span></div>
             <div class="IntroSection_intro__body___1fjL">
-                <h2 class="h2">LOMO滤镜</h2>
+                <h2 class="h2">使用Style transform转换照片风格，一键美化照片</h2>
                 <div class="IntroSection_intro__content__-dr-k">
-                    <p>使用LOMO滤镜，打造出LOMO相机拍摄的照片效果。明显的暗角，突出的色彩，让照片更具随意性。</p>
-                </div><a style="width: ;" href="https://www.fotor.com.cn/photo-editor-beta/editor/effect"
+                    <p>上传你想让你的理想风格照片，使你的照片更具随意性、创意性。</p>
+                </div><a style="width: ;" href="\trans_random_style"
                     target="_blank" rel="nofollow"
                     class="PageLink_pageLink__1twZl IntroSection_intro__pageLink__1exCC PageLink_addLink__h5PN_">
-                    <div class="PageLink_linkbox__2Z4AR"><span>马上试试</span></div>
+                    <div class="PageLink_linkbox__2Z4AR"><span>马上试试(任意风格)</span></div>
                 </a>
             </div>
         </div>

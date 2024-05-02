@@ -33,13 +33,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Style transform</a>
+            <a class="navbar-brand" href="/test">Style transform</a>
           </div>
       
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="/test">首页 <span class="sr-only">(current)</span></a></li>
               <li><a href="#">Link</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -100,48 +100,37 @@
               {% endif %}
             </div>
         </form>
-      </div>
-
-
-
-
-  <h2 class="text-2xl font-bold mb-4">下面部分展示下载图像路径下的随机5张图片</h2>
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-
-        <div class="rounded-lg text-card-foreground
-        shadow-sm bg-[#282a36] border border-gray-500" data-v0-t="card">
-        <div class="flex flex-col space-y-1.5 p-6 bg-[#6272a4] text-white">
-            <h3 class="text-lg font-semibold">First 5 Downloaded Images</h3>
-
-            图片
-        </div>
-            <div class="p-6">
-                 {% for image_file in image_files %}
-                    <img src="{{ url_for('static', filename='inputs/' + image_file) }}" alt="{{ image_file }}"
-                         class="w-full object-cover border border-gray-500 rounded-lg
-                        overflow-hidden" height="200" width="200" style="aspect-ratio: 200 / 200;
-                         object-fit: cover;"
-                    >
-        {% endfor %}
-        </div>
-
-
-
-            <div class="flex justify-between items-center mt-2">
-                <button class="inline-flex items-center justify-center text-sm font-medium ring-offset-background
-                transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
-                focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90
-                h-9 rounded-md px-3 bg-[#6272a4] text-white" onclick="window.location.href='/show_image'">
-                  View
-                </button>
-            <button class="inline-flex items-center justify-center text-sm font-medium ring-offset-background
-            transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
-            focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
-            bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 border border-gray-500
-            text-white"  id="openBtn">
-              Delete
-            </button >
+        <div style="width: 75%;margin-left:10%">
+          {% set image_files = 'flasktest/static/original/1/a' | list_files %}
+        {% if image_files %}
+            <div class="row" style="margin-top: 5%;">
+                {% for image_file in image_files %}
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="{{ url_for('static', filename='original/1/a/' + image_file) }}" alt="{{ image_file }}">
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
+        {% endif %}
+
+        {% set image_files = 'flasktest/static/inputs' | list_files %}
+        {% if image_files %}
+            <div class="row">
+                {% for image_file in image_files %}
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="{{ url_for('static', filename='inputs/' + image_file) }}" alt="{{ image_file }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        </div>
+        
+        
+        <button type="button" class="btn btn-primary" href="/clear"></button>
+      </div>
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
