@@ -1,5 +1,5 @@
-metanet.load_state_dict(torch.load('D:\\Anaconda3Project\\styletransfer\\model\\metanet_base16_style50_tv1e-06_tagnohvd_6.pth'))
-transform_net.load_state_dict(torch.load('D:\\Anaconda3Project\\styletransfer\\model\\metanet_base16_style50_tv1e-06_tagnohvd_transform_net_6.pth'))
+metanet.load_state_dict(torch.load('D:\\Anaconda3Project\\styletransfer\\model\\metanet_base16_style50_tv1e-06_tagnohvd_13.pth'))
+transform_net.load_state_dict(torch.load('D:\\Anaconda3Project\\styletransfer\\model\\metanet_base16_style50_tv1e-06_tagnohvd_transform_net_13.pth'))
 content_images = torch.stack([random.choice(content_dataset)[0] for i in range(4)]).to(device)
 # while content_images.min() < -2:
 #     print('.', end=' ')

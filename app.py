@@ -104,12 +104,13 @@ def aa0():
     #     pass
     # else:
     #     # 处理 GET 请求的逻辑
-        return render_template('test.html')
+        username = request.form.get("username")
+        return render_template('test.html',username=username)
 
-# # 注册
-# @app.route("/register")
-# def aa2():
-#     return render_template('register.html')
+# 注册
+@app.route("/blog")
+def blog():
+    return render_template('blog.html')
 
 # 注册页面
 @app.route("/register", methods=["GET", "POST"])
@@ -169,7 +170,7 @@ def process_image_style1():
         while(1):
             if is_film_empty(image_folder) ==False:
                 break
-            time.sleep(2)
+            # time.sleep(2)
 
         isShow = True
         return render_template('showAfterFixedTrans.html')
@@ -195,13 +196,13 @@ def process_image_style2():
         # upload_folder = 'static/style/style1'
         # file_path2 = os.path.join(upload_folder, "xingkong.jpg")
         # file2.save(file_path2)
-        style_image=r'flasktest/static/style/style2/style2.jpg'
+        style_image=r'flasktest/static/style/style2/2.jpg'
         make_image(style_image)
         image_folder = r'flasktest/static/inputs'
         while(1):
             if is_film_empty(image_folder) ==False:
                 break
-            time.sleep(2)
+            # time.sleep(2)
 
         isShow = True
         return render_template('showAfterFixedTrans.html')
@@ -228,13 +229,13 @@ def process_image_style3():
         # file_path2 = os.path.join(upload_folder, "xingkong.jpg")
         # file2.save(file_path2)
         print("3")
-        style_image=r'flasktest/static/style/style3/style3.jpg'
+        style_image=r'flasktest/static/style/style3/3.jpg'
         make_image(style_image)
         image_folder = r'flasktest/static/inputs'
         while(1):
             if is_film_empty(image_folder) ==False:
                 break
-            time.sleep(2)
+            # time.sleep(2)
 
         isShow = True
         return render_template('showAfterFixedTrans.html')
@@ -264,7 +265,7 @@ def process_image_style_random():
         while(1):
             if is_film_empty(image_folder) ==False:
                 break
-            time.sleep(2)
+            # time.sleep(2)
 
         isShow = True
         return render_template('showAfterFixedTrans.html')

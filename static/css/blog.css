@@ -1,0 +1,219 @@
+body, html{
+    background-color: rgb(0, 0, 0, 0.05);
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+dt, dd, dl{
+    margin: 0;
+    padding: 0;
+}
+dt, dd{
+    font-weight: 500;
+    display: inline-block;
+}
+button {
+    cursor: pointer;
+}
+textarea{
+    width: 82%; height: 50px; resize: none
+}
+.confirm_btn{
+    border: none;
+    background: red;
+    color: white;
+    padding: 4px 10px;
+}
+#button_submit_div{
+    text-align: right;
+}
+.time{
+    padding: 0 10px;
+    color: lightskyblue;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+ul > li:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+ul > li{
+    padding: 10px 10px;
+    border-bottom: solid 1px lightgray;
+    display: block;
+}
+ul > li:last-child{
+    border-bottom: none;
+}
+.cmt_img, .cmt_reply, .cmt_info{
+    display: inline-block;
+    vertical-align: middle;
+}
+ 
+.cmt_reply {
+    float: right;
+}
+ 
+.cmt_reply_btn {
+    border: none;
+    display: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+ 
+.cmt_reply_checker {
+    border: none;
+    cursor: pointer;
+}
+ 
+.thumb_up:after {
+    content: '\2764';
+    font-family: "Segoe Fluent Icons", sans-serif;
+    width: 40px;
+    height: 40px;
+ 
+    cursor: pointer;
+    margin-left: 4px;
+}
+ 
+.avatar{
+    display: block;
+}
+
+aside{
+    margin-left: 20px;
+    text-align: center;
+    width: 300px;
+}
+main{
+    
+    padding: 20px;
+    text-align: left;
+    width: 70%;
+    background: white;
+    vertical-align: top;
+    margin-top: 50px;
+    margin-left: 12.5%;
+    box-shadow: 2px 0 2px 0 lightgray;
+    display: inline-block;
+}
+.form_item{
+    padding: 10px 0;
+}
+.menu > div{
+    display: inline-block;
+    padding: 10px 10px;
+}
+.menu > div:hover{
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.menu{
+    margin: 0;
+    padding: 0;
+    background: white;
+    position: absolute;
+    width: 100%;
+    text-align: center
+}
+ 
+textarea{
+    border: solid 1px lightgray;
+    border-radius: 3px;
+}
+ 
+textarea{
+    padding: 10px;
+    height: 60px;
+}
+ 
+a {
+    color: dodgerblue;
+}
+ 
+.comment {
+    padding: 0 0 0 30px;
+    display: block; margin-top: 8px
+}
+.role_info {
+    float: right;
+}
+.role_pic, .role_name {
+    display: inline-block;
+    margin-left: 5px;
+}
+ 
+.avatar {
+    border-radius: 100%;
+    vertical-align: top;
+}
+.role_input_box, .role_confirm_btn {
+    display: inline-block;
+}
+.role_confirm_btn {
+    height: inherit;
+    border: none;
+    width: 80px;
+    background: red;
+    color: white;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+#commentator {
+    border: none;
+    outline-style: none;
+    border-radius: 3px;
+    height: inherit;
+    width: 363px;
+}
+.fake_input_box {
+    border: solid 1px lightgrey;
+    border-right-style: none;
+    width: 500px;
+    padding: 0 0 0 3px;
+    margin: 0;
+    height: 50px;
+    position: relative;
+    border-radius: 3px;
+}
+ 
+.emoji_trigger_btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+    vertical-align: bottom;
+}
+ 
+.emoji_board {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 105px;
+    font-size: 25px;
+    padding: 0 15px;
+    background: lightgrey;
+    border-radius: 3px;
+}
+ 
+.emoji_item {
+    cursor: pointer;
+}
+ 
+.emoji_board:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 0;
+    height: 0;
+    top: 4px;
+    right: -20px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid lightgrey;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+
